@@ -2,4 +2,4 @@
 .env
 venv/
 .gradio/
-models/brain_tumor_resnet_v1_savedmodel/
+models/*
