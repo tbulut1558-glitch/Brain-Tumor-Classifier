@@ -4,8 +4,11 @@ A deep learning system for classifying brain tumors from MRI scans using ResNet5
 The model predicts four categories:
 
 Glioma
+
 Meningioma
+
 Pituitary Tumor
+
 No Tumor
 
 
@@ -57,6 +60,7 @@ During the first training phase, all ResNet50 layers were kept frozen, allowing 
 Custom Classification Head
 
 The original classification layers of ResNet50 were removed (include_top=False) and replaced with a custom head tailored to the four tumor classes:
+
     Flatten – turns the 3D feature maps into a single vector.
     Dense (512, ReLU) – learns high-level tumor-specific patterns.
     Dropout (0.5) – reduces overfitting by randomly disabling half of the neurons during training.
@@ -66,8 +70,8 @@ Two-Stage Fine-Tuning Strategy
 
 To get the best performance while keeping the model stable, training was done in two phases:
 
-Phase 1	Train only the new classification head (ResNet50 frozen)	Helps the added layers adapt quickly to the pretrained features	1e-4
-Phase 2	Unfreeze the last 40 convolutional layers	Fine-tunes high-level features to better capture tumor characteristics	1e-5
+    Phase 1	Train only the new classification head (ResNet50 frozen)	Helps the added layers adapt quickly to the pretrained features	1e-4
+    Phase 2	Unfreeze the last 40 convolutional layers	Fine-tunes high-level features to better capture tumor characteristics	1e-5
 
 
 Results
