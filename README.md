@@ -23,6 +23,7 @@ Key Features
 
 
 Project Structure
+
     project_root/
     │
     ├── data/
