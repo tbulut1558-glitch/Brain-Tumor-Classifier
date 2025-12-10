@@ -83,9 +83,8 @@ Run the application:
 
 Installation & Usage
 
-    1. Clone the repository
-    git clone https://github.com/<your-username>/<your-repo>.git
-    cd <your-repo>
+    1. git clone https://github.com/tbulut1558-glitch/Brain-Tumor-Classifier.git
+    cd Brain-Tumor-Classifier
 
     2. (Optional) Create a virtual environment
     python -m venv .venv
@@ -102,3 +101,4 @@ Future Work
 
     Grad-CAM heatmaps for explainability
     TensorFlow Lite conversion for mobile/edge deployment
+    
